@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthcare Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  <form action="/submit" method="post" enctype="multipart/form-data">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
-    <label for="age">Age:</label>
-    <select id="age" name="age" required>
-      <option value="">Select your age</option>
-      {% for i in range(1, 101) %}
-      <option value="{{ i }}">{{ i }}</option>
-      {% endfor %}
-    </select><br><br>
-    <label for="file">Upload File:</label>
-    <input type="file" id="file" name="file" required><br><br>
-    <button type="submit">Submit</button>
-  </form>
+    <div class="container">
+        <h1 class="title">Healthcare Dashboard</h1>
+        <form class="form" method="POST" enctype="multipart/form-data">
+            <label for="name" class="label">Name</label>
+            <input type="text" id="name" name="name" class="input-field" required>
+
+            <label for="age" class="label">Age</label>
+            <select id="age" name="age" class="input-field">
+                <option value="">Select Age</option>
+                {% for i in range(1, 101) %}
+                <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="file" class="label">Upload File</label>
+            <input type="file" id="file" name="file" class="input-field" required>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

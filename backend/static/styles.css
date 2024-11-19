@@ -1,0 +1,154 @@
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden; /* Prevent unnecessary scrolling */
+  }
+  
+  /* Container Styling */
+  .container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+    transform: translateY(10px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: translateY(0); /* Smooth hover effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6f61;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Form Styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  /* Label Styling */
+  .label {
+    text-align: left;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  /* Input Field Styling */
+  .input-field {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+  }
+  
+  /* Submit Button Styling */
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    animation: buttonPulse 1.5s infinite;
+  }
+  
+  .submit-button:hover {
+    background: #ff4a3a;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .container {
+      max-width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .submit-button {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .submit-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Animations */
+  
+  /* Fade-in Effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bounce Animation for Title */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Pulsing Animation for Button */
+  @keyframes buttonPulse {
+    0% {
+      box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+    }
+  }
+  
